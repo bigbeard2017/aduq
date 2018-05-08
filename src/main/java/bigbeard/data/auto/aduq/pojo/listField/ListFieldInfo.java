@@ -28,6 +28,21 @@ public class ListFieldInfo {
      * 是否显示
      */
     private boolean hide;
+    /**
+     * 列宽度
+     */
+    private int width;
+
+    /**
+     * 显示格式
+     */
+    private String format;
+
+    /**
+     * 信息过长的时候是否允许换行
+     */
+    private boolean allowTextWrap = false;
+
 
     public boolean isKey() {
         return key;
@@ -72,5 +87,29 @@ public class ListFieldInfo {
     public ListFieldInfo setHide(boolean hide) {
         this.hide = hide;
         return this;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public boolean isAllowTextWrap() {
+        return allowTextWrap;
+    }
+
+    public void setAllowTextWrap(boolean allowTextWrap) {
+        this.allowTextWrap = allowTextWrap;
     }
 }

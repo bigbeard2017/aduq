@@ -38,6 +38,17 @@ public abstract class Field {
      */
     private String faultMsg = "";
 
+    /**
+     * 控件宽度
+     */
+    private int width;
+
+    /**
+     * 控件显示高度
+     */
+    private int height;
+
+
 
     public boolean isMustInput() {
         return mustInput;
@@ -109,5 +120,21 @@ public abstract class Field {
     public Field setFaultMsg(String faultMsg) {
         this.faultMsg = faultMsg;
         return this;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
