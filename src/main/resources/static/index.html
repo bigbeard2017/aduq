@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="javascript">
+        function f() {
+            console.log("start");
+            var date = new Date();
+            //var elementById = document.getElementById("diva");
+            var t = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+            //elementById.innerHTML=t;
+            alert(t);
+            return t;
+        }
+
+
+    </script>
+</head>
+<body>
+wo cao zhen de ke yi ne bbbbbb
+<br/>
+<div id="diva" style="height: 300px;width: 300px;background-color: burlywood">
+
+</div>
+<input type="button" onclick="f()" value="f"/>
+</body>
+</html>
