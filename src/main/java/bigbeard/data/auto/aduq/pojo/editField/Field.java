@@ -41,12 +41,12 @@ public abstract class Field {
     /**
      * 控件宽度
      */
-    private int width;
+    private int width = 100;
 
     /**
      * 控件显示高度
      */
-    private int height;
+    private int height = 30;
 
 
 
@@ -126,15 +126,17 @@ public abstract class Field {
         return width;
     }
 
-    public void setWidth(int width) {
+    public Field setWidth(int width) {
         this.width = width;
+        return this;
     }
 
     public int getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public Field setHeight(int height) {
         this.height = height;
+        return this;
     }
 }

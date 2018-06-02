@@ -10,11 +10,11 @@ public class TextField extends Field {
     /**
      * 最大长度
      */
-    private int length;
+    private int length = 32767;
     /**
      * 默认值
      */
-    private String defaultValue;
+    private String defaultValue = "";
 
     public TextField() {
         this.setFieldType(FieldType.TEXT);

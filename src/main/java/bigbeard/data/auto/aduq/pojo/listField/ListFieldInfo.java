@@ -11,32 +11,32 @@ public class ListFieldInfo {
     /**
      * 是否主键
      */
-    private boolean key;
+    private boolean key = false;
     /**
      * 标题
      */
-    private String title;
+    private String title = "";
     /**
      * 字段名称
      */
-    private String name;
+    private String name = "";
     /**
      * 连接到外部的url
      */
-    private String url;
+    private String url = "";
     /**
      * 是否显示
      */
-    private boolean hide;
+    private boolean hide = false;
     /**
      * 列宽度
      */
-    private int width;
+    private int width = 50;
 
     /**
      * 显示格式
      */
-    private String format;
+    private String format = "";
 
     /**
      * 信息过长的时候是否允许换行
@@ -93,23 +93,26 @@ public class ListFieldInfo {
         return width;
     }
 
-    public void setWidth(int width) {
+    public ListFieldInfo setWidth(int width) {
         this.width = width;
+        return this;
     }
 
     public String getFormat() {
         return format;
     }
 
-    public void setFormat(String format) {
+    public ListFieldInfo setFormat(String format) {
         this.format = format;
+        return this;
     }
 
     public boolean isAllowTextWrap() {
         return allowTextWrap;
     }
 
-    public void setAllowTextWrap(boolean allowTextWrap) {
+    public ListFieldInfo setAllowTextWrap(boolean allowTextWrap) {
         this.allowTextWrap = allowTextWrap;
+        return this;
     }
 }

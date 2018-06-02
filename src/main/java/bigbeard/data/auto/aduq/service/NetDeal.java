@@ -1,5 +1,6 @@
 package bigbeard.data.auto.aduq.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -11,10 +12,10 @@ import javax.annotation.PreDestroy;
 @Service
 public class NetDeal {
 
-//    public NetDeal()
-//    {
-//        System.out.println("NetDeal 构造函数");
-//    }
+    @Autowired
+    public NetDeal() {
+        System.out.println("NetDeal 构造函数");
+    }
 
     @PostConstruct
     public void init() {
