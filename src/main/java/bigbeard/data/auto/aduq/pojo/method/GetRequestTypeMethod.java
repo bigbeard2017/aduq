@@ -13,13 +13,15 @@ public class GetRequestTypeMethod extends RequestMethodType {
 
     private List<String> parameterKeys = new ArrayList<>();
 
+    private static final String GET = "GET";
+
     public GetRequestTypeMethod addParameterKeys(String key) {
         if (null == key || "".equals(key)) {
             return this;
         }
         boolean flg = false;
-        for (int i = 0; i < parameterKeys.size(); i++) {
-            if (key.equals(parameterKeys.get(i))) {
+        for (String parameterKey : parameterKeys) {
+            if (key.equals(parameterKey)) {
                 flg = true;
                 break;
             }
@@ -33,7 +35,7 @@ public class GetRequestTypeMethod extends RequestMethodType {
     /**
      * 获取get请求的url中的参数名称
      *
-     * @return
+     * @return 返回URL中需要的参数名称集合
      */
     public List<String> getParameterKeys() {
         return parameterKeys;
@@ -41,6 +43,6 @@ public class GetRequestTypeMethod extends RequestMethodType {
 
     @Override
     public String getMethodType() {
-        return "GET";
+        return GET;
     }
 }
